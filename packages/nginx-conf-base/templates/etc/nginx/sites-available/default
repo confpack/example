@@ -1,0 +1,6 @@
+server {
+  listen 80 default_server;
+  server_name _; # This is just an invalid value which will never trigger on a real hostname.
+  return 200 "Hello from {{ confpack['fqdn'] }}";
+}
+

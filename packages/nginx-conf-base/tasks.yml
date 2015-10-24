@@ -1,0 +1,7 @@
+---
+postinst:
+  - file: path=/etc/nginx/sites-available/default
+          state=removed
+  - file: src=/etc/nginx/sites-available/test
+          dest=/etc/nginx/sites-enabled/test
+          
